@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,18 +16,30 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <link rel="stylesheet" href="style-button.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-button.css">
+    <link rel="stylesheet" href="./css/style-check.css">
     <title>architectural designer</title>
 </head>
 
 <body>
+
+    <div class="box-check">
+        <h4>Email eviado</h4>
+        <i class="fa-solid fa-check"></i>
+        
+    </div>
+
+
     <header>
-        <h1 class="logo">Architectural <span class="highlight">Designer</span></h1>
+        <h1 class="logo ">Architectural <span class="highlight">Designer</span></h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="services.html">Serviços</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
@@ -37,8 +50,8 @@
         <section class="home">
             <img src="img/designer 3.jpg" alt="arquitetura">
             <div class="content-home">
-                <h2>Architectural Designer</h2>
-                <p>Arquitetura é a arte e a técnica de projetar e edificar espaços habitáveis, públicos ou privados,
+                <h2 class="slide-down"><span >Architectural</span> <span class="slide-right">Designer</span></h2>
+                <p class="slide-up">Arquitetura é a arte e a técnica de projetar e edificar espaços habitáveis, públicos ou privados,
                     urbanos ou rurais, com o objetivo de organizar o entorno e criar um ambiente útil e esteticamente
                     agradável para o ser humano.</p>
 
@@ -63,9 +76,64 @@
 
         </section>
 
+
+
+        <section class="services">
+            <div>
+                <h2>Nossos Serviços</h2>
+                <ul class="services-cards">
+                    <li class="service slide-up-delay-2">
+                        <i class="fa-solid fa-house"></i>
+                        <h3>Projeto Residencial</h3>
+                        <p>Desenvolvemos projetos de arquitetura residencial que unem beleza, conforto e funcionalidade,
+                            sempre
+                            alinhados às necessidades e expectativas de nossos clientes.</p>
+                    </li>
+
+                    <li class="service slide-up-delay-3">
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Projeto Comercial</h3>
+                        <p>Elaboramos projetos de arquitetura comercial que valorizam a identidade e a proposta de cada
+                            negócio, criando espaços únicos e atraentes para clientes e colaboradores.</p>
+                    </li>
+
+                    <li class="service slide-up-delay-4">
+                        <i class="fa-solid fa-building"></i>
+                        <h3>Projeto Corporativo</h3>
+                        <p>Realizamos projetos de arquitetura corporativa que refletem a imagem e os valores da empresa,
+                            promovendo a integração e o bem-estar dos colaboradores.</p>
+                    </li>
+
+                    <li class="service slide-up-delay-5">
+                        <i class="fa-solid fa-couch"></i>
+                        <h3>Projeto de Interiores</h3>
+                        <p>Oferecemos soluções de design de interiores que transformam ambientes, criando espaços
+                            personalizados e acolhedores, com atenção aos detalhes e à funcionalidade.</p>
+                    </li>
+
+                    <li class="service slide-up-delay-6">
+                        <i class="fa-solid fa-tree"></i>
+                        <h3>Projeto Paisagístico</h3>
+                        <p>Desenvolvemos projetos de paisagismo que integram a arquitetura e a natureza, criando espaços
+                            externos harmoniosos e sustentáveis, que valorizam o entorno e promovem o bem-estar.</p>
+                    </li>
+
+                    <li class="service slide-up-delay-7">
+                        <i class="fa-solid fa-hammer"></i>
+                        <h3>Projeto de Reforma</h3>
+                        <p>Realizamos projetos de reforma que revitalizam e valorizam espaços existentes, promovendo a
+                            modernização e a otimização de ambientes, com qualidade e eficiência.</p>
+                    </li>        
+                    
+
+
+                </ul>
+            </div>
+        </section>
+
         <section class="about">
             <div class="content-about">
-                <h2>Sobre</h2>
+                <h2>Sobre Nós</h2>
                 <p>Na Architectural Designer, unimos criatividade, funcionalidade e excelência técnica para transformar
                     ideias em
                     projetos arquitetônicos de alto impacto. Atuamos com foco na criação de espaços que equilibram
@@ -79,22 +147,36 @@
             </div>
         </section>
 
+
+        <section class="email">
+            <h2>Receba nossas novidades</h2>
+            <i class="fa-regular fa-envelope"></i>
+            <p>Inscreva-se em nossa newsletter e fique por dentro de todas as novidades e promoções da Architectural Designer.</p>
+
+            <form class="email-form" onsubmit="event.preventDefault(); carregarConteudo();">
+                <label for="email">Insira seu e-mail para receber nossas novidades:</label>
+                <input type="email" id="email" name="email">
+                <a href="#" class="btn-email">Inscrever-de</a>
+            </form>
+
+        </section>
+
         <section class="proposal">
             <h2>Nossa Proposta</h2>
             <ul class="proposal-cards">
-                <li class="card-proposal">
+                <li class="card-proposal slide-up-delay-2 ">
                     <h3>Design Inovador</h3>
                     <p>Desenvolvemos projetos que unem beleza e funcionalidade, sempre atentos às tendências e
                         tecnologias do setor.</p>
                 </li>
 
-                <li class="card-proposal">
+                <li class="card-proposal slide-up-delay-3">
                     <h3>Sustentabilidade</h3>
                     <p>Valorizamos a sustentabilidade em nossos projetos, buscando soluções que minimizem o impacto
                         ambiental e promovam a eficiência energética.</p>
                 </li>
 
-                <li class="card-proposal">
+                <li class="card-proposal slide-up-delay-4">
                     <h3>Qualidade e Eficiência</h3>
                     <p>Trabalhamos com rigor e comprometimento para garantir a qualidade e a eficiência em todas as
                         etapas do projeto, desde a concepção até a execução.</p>
@@ -109,7 +191,7 @@
         <section class="testimonials">
             <h2>Depoimentos</h2>
             <ul class="testimonial-cards">
-                <li class="testimonial">
+                <li class="testimonial slide-up-delay-2">
                     <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de usuário">
                     <div>
                         <i class="fa-solid fa-star"></i>
@@ -125,7 +207,7 @@
                         captar exatamente o que eu queria e transformar em um projeto incrível!"</blockquote>
                 </li>
 
-                <li class="testimonial inverted">
+                <li class="testimonial inverted slide-up-delay-3">
                     <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Foto de usuário">
                     <div>
                         <i class="fa-solid fa-star"></i>
@@ -141,7 +223,7 @@
                         prestativos em todas as etapas do projeto. Recomendo!"</blockquote>
                 </li>
 
-                <li class="testimonial">
+                <li class="testimonial slide-up-delay-4">
                     <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Foto de usuário">
                     <div>
                         <i class="fa-solid fa-star"></i>
@@ -211,4 +293,6 @@
     </main>
 </body>
 
+
+<script src="./js/reveal.js"></script>
 </html>

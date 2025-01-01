@@ -24,6 +24,10 @@
     --font-primaty-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-snap-type: start;
+}
+
 body{
     background-color: var(--background-light-color);
     font-family: var(--font-primaty-family);
@@ -32,6 +36,12 @@ body{
 
 .highlight{
     color: var(--primary-color);
+}
+
+section{
+    padding: 50px 0;
+    scroll-behavior: smooth;
+
 }
 
 header{
@@ -130,6 +140,83 @@ header nav ul li a{
 }
 
 
+/* Services Section */
+.services{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-dark-grey);
+    margin: 0px auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.services h2{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: left;
+    color: var(--background-light-color);
+    margin-left: 5%;
+    padding: 0px;
+    width: 90%;
+}
+.services .services-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 90%;
+    height: 70%;
+    margin: 0px 5%;
+    padding: 20px;
+}
+
+.services .services-cards .service{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.services .services-cards .service i{
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.services .services-cards .service h3{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.services .services-cards .service p{
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--white-color);
+    width: 90%;
+    margin: 0px auto;
+}
+
+
+
+
+
+
+
+
+
+
 /* About Section */
 
 .about{
@@ -154,7 +241,7 @@ header nav ul li a{
     align-items: left;
     flex-direction: column;
     gap: 20px;
-    background-color: var(--background-dark-grey);
+    background-color:transparent;
     position: absolute;
     left: 5%;
     padding: 20px 30px;
@@ -166,7 +253,7 @@ header nav ul li a{
     font-weight: 700;
     letter-spacing: 2px;
     text-align: left;
-    color: var(--white-color);
+    color: var(--background-dark-color);
 }
 
 .about p{
@@ -174,9 +261,121 @@ header nav ul li a{
     font-weight: 400;
     letter-spacing: 1px;
     text-align: left;
-    color: var(--white-color);
+    color: var(--background-dark-color);
     width: 100%;
 }
+
+
+
+.email{
+    width: 100%;
+    height: 70vh;
+    background-image: url("../img/designer-5.jpg");
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 30px auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 30px;
+    text-align: center;
+}
+.email h2{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--white-color);
+    padding: 0px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.email i{
+    font-size: 30px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color); 
+    border-radius: 50%;
+    padding: 20px;
+    font-weight: 700;
+
+}
+
+.email p{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--white-color);
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.email form{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.email form input{
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    font-weight: 500;
+    font-family: var(--font-primaty-family);
+    box-shadow: 0 1px 20px #00000059;
+    border: 1px solid #007bff;
+}
+
+.email form label{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--white-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.email .btn-email{
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-weight: 500;
+    font-family: var(--font-primaty-family);
+    text-decoration: none;
+    z-index: 99;
+    box-shadow: 0 7px 0px #000;
+}
+
+.email .btn-email:hover{
+    background-color: #0051a8;
+    transform: translateY(3px);
+    box-shadow: 0 1px 0px #000;
+    
+}
+
+
 
 /*propotas*/
 
@@ -267,7 +466,7 @@ header nav ul li a{
     align-items: center;
     gap: 20px;
     width: 90%;
-    height: 70%;
+    height: 500px;
     margin: 10px 5%;
 }
 
@@ -315,7 +514,7 @@ header nav ul li a{
     letter-spacing: 1px;
     text-align: center;
     color: var(--white-color);
-    width: 90%;
+    width: 100%;
     margin: 0px auto;
 }
 
@@ -478,7 +677,7 @@ header nav ul li a{
 
 footer{
     width: 100%;
-    height: 60px;
+    height: 80px;
     background-color:var(--background-light-color);
     display: flex;
     justify-content: center;
@@ -486,4 +685,5 @@ footer{
     position: static;
     bottom: 0;
     z-index: 1000;
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.137);
 }
