@@ -39,7 +39,8 @@ body{
 }
 
 section{
-    padding: 50px 0;
+    width: 100vw;
+    height: 100vh;
     scroll-behavior: smooth;
 
 }
@@ -122,14 +123,16 @@ header nav ul li a{
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
 }
 .home .content-home h2{
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-align: left;
+    margin: 10px 5%;
 }
 
 .home .content-home p{
@@ -137,6 +140,8 @@ header nav ul li a{
     font-weight: 400;
     letter-spacing: 1px;
     width: 80%;
+    text-align: left;
+    margin: 10px 5%;
 }
 
 
@@ -147,8 +152,8 @@ header nav ul li a{
     background-color: var(--background-dark-grey);
     margin: 0px auto;
     display:flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     position: relative;
 }
 
@@ -160,34 +165,81 @@ header nav ul li a{
     color: var(--background-light-color);
     margin-left: 5%;
     padding: 0px;
-    width: 90%;
+    width: 100%;
+
 }
 .services .services-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    width: 90%;
-    height: 70%;
-    margin: 0px 5%;
+    width: 100%;
+    height: 100%;
+    margin: 20px 10%;
     padding: 20px;
 }
 
 .services .services-cards .service{
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
+    width:350px;
+    height: 460px;
+    border-radius: 1px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px rgba(15, 17, 19, 0.479);
+    position: relative;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);;
+    overflow: hidden;
+    transition: box-shadow 0.4s linear;
 }
 
+
+.services .services-cards .service .filter-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to top, transparent,#007bff44);
+    border-radius: 1px;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.services .services-cards .service img{
+    position: absolute;
+    z-index: -2;
+    filter: brightness(0.7);
+    height: 100%;
+    width: 100%;
+    border-radius: 1px;
+    object-fit: cover;
+    transition: filter 0.2s ease-in-out;
+}
+
+.services .services-cards .service .service-text{
+    width: auto;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    z-index: 5;
+}
+
+
 .services .services-cards .service i{
-    font-size: 20px;
-    color: var(--primary-color);
+    font-size: 40px;
+    color: var(--background-light-color);
 }
 
 .services .services-cards .service h3{
@@ -208,6 +260,24 @@ header nav ul li a{
     margin: 0px auto;
 }
 
+/* Efeito hover */
+
+.services .services-cards .service:hover{
+    transform: translateY(-2px);
+    box-shadow: 15px 15px 1px rgba(15, 17, 19, 0.479);
+}
+
+.services .services-cards .service:hover img {
+    filter: brightness(1); /* Clareia a imagem e aplica um tom verde */
+}
+
+.services .services-cards .service:hover .filter-box {
+    background-image: linear-gradient(to top, transparent, #2878a744); /* Muda a cor do filtro para verde */
+}
+
+.services .services-cards .service:hover .service-text{
+    text-shadow: 0 1px 20px rgba(41, 44, 44, 0.596);;
+}
 
 
 
@@ -383,6 +453,9 @@ header nav ul li a{
     width: 100%;
     height: 100vh;
     background-color: var(--background-dark-color);
+    background-image: url("../img/IA-residencial-project.jpg");
+    background-attachment: fixed;
+    background-blend-mode: multiply;
     margin: 0px auto;
     display:center;
     align-items: center;
@@ -413,7 +486,7 @@ header nav ul li a{
 
 .proposal .proposal-cards .card-proposal{
     width: 30%;
-    height: 50%;
+    height: auto;
     background-color: var(--background-light-color);
     border-radius: 24px;
     display: flex;
@@ -423,6 +496,7 @@ header nav ul li a{
     gap: 20px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s linear;
 }
 
 .proposal .description{
@@ -434,6 +508,26 @@ header nav ul li a{
     width: 90%;
     margin: 0px auto;
 }
+
+.proposal .proposal-cards .card-proposal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    transform: scale(0);
+}
+
+/*hovers*/
+.proposal .proposal-cards .card-proposal:hover {
+    height: 100%;
+    justify-content: flex-end;
+}
+.proposal .proposal-cards .card-proposal:hover img{
+    display: block;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+
 
 
 /*testimonials*/
@@ -680,10 +774,17 @@ footer{
     height: 80px;
     background-color:var(--background-light-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: static;
     bottom: 0;
     z-index: 1000;
     box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.137);
+}
+
+footer .time-box{
+    font-weight: 500;
+    margin-left: 5px;
+
 }
